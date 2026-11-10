@@ -1,0 +1,11 @@
+
+module my-systemd-fstab 1.0;
+
+require {
+	type systemd_fstab_generator_t;
+	type binderfs_t;
+	class dir getattr;
+}
+
+#============= systemd_fstab_generator_t ==============
+allow systemd_fstab_generator_t binderfs_t:dir getattr;
